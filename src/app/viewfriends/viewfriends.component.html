@@ -1,0 +1,21 @@
+<app-admin-nav></app-admin-nav>
+<h1 class="display-4 text-center mt-3 ">All Friends</h1> 
+<table class="table table-striped-columns">
+<tr>
+<!-- <th scope="col">Id</th> -->
+<th scope="col">Name</th>
+<th scope="col">Friend's Name</th>
+<th scope="col">Friend's Nickname</th>
+<th scope="col">Describe Your Friend</th>
+</tr>
+<tbody class="table-group-divider">
+<tr *ngFor="let i of friendsdata">
+<!-- <td>{{i._id}}</td>     -->
+<td>{{i.name}}</td>
+<td>{{i.friendName}}</td>
+<td>{{i.friendNickName}}</td>
+<td>{{i.DescribeYourFriend}}</td>
+</tr>
+
+</tbody>
+</table>

@@ -16,6 +16,10 @@ import { FormsModule } from '@angular/forms';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { Nav2Component } from './nav2/nav2.component';
 import { AddfriendsComponent } from './addfriends/addfriends.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminNavComponent } from './admin-nav/admin-nav.component';
+import { ViewCourseComponent } from './view-course/view-course.component';
+import { ViewfriendsComponent } from './viewfriends/viewfriends.component';
 
 const myRoute:Routes=[
   {path:"",
@@ -33,7 +37,13 @@ const myRoute:Routes=[
   {path:"addcourse",
   component:AddCourseComponent},
   {path:"addfriends",
-  component:AddfriendsComponent}
+  component:AddfriendsComponent},
+  {path:"adminlogin",
+  component:AdminloginComponent},
+  {path:"viewcourse",
+  component:ViewCourseComponent},
+  {path:"viewfriends",
+  component:ViewfriendsComponent}
 ]
 
 @NgModule({
@@ -48,7 +58,11 @@ const myRoute:Routes=[
     EmployeeregComponent,
     AddCourseComponent,
     Nav2Component,
-    AddfriendsComponent
+    AddfriendsComponent,
+    AdminloginComponent,
+    AdminNavComponent,
+    ViewCourseComponent,
+    ViewfriendsComponent
   ],
   imports: [
     BrowserModule,
