@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,9 @@ import { HometeamComponent } from './hometeam/hometeam.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 import { EmployeeregComponent } from './employeereg/employeereg.component';
 import { FormsModule } from '@angular/forms';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { Nav2Component } from './nav2/nav2.component';
+import { AddfriendsComponent } from './addfriends/addfriends.component';
 
 const myRoute:Routes=[
   {path:"",
@@ -25,7 +29,11 @@ const myRoute:Routes=[
   {path:"employeelogin",
   component:EmployeeloginComponent},
   {path:"employeereg",
-  component:EmployeeregComponent}
+  component:EmployeeregComponent},
+  {path:"addcourse",
+  component:AddCourseComponent},
+  {path:"addfriends",
+  component:AddfriendsComponent}
 ]
 
 @NgModule({
@@ -37,13 +45,17 @@ const myRoute:Routes=[
     HomeAboutComponent,
     HometeamComponent,
     EmployeeloginComponent,
-    EmployeeregComponent
+    EmployeeregComponent,
+    AddCourseComponent,
+    Nav2Component,
+    AddfriendsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [],
