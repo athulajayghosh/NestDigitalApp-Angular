@@ -9,6 +9,7 @@ import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 import { HomeProductsComponent } from './home-products/home-products.component';
 import { HomeAboutComponent } from './home-about/home-about.component';
 import { HometeamComponent } from './hometeam/hometeam.component';
+import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 
 const myRoute:Routes=[
   {path:"",
@@ -18,7 +19,9 @@ const myRoute:Routes=[
   {path:"about",
   component:HomeAboutComponent},
   {path:"team",
-  component:HometeamComponent}
+  component:HometeamComponent},
+  {path:"employeelogin",
+  component:EmployeeloginComponent}
 ]
 
 @NgModule({
@@ -28,7 +31,8 @@ const myRoute:Routes=[
     HomeNavbarComponent,
     HomeProductsComponent,
     HomeAboutComponent,
-    HometeamComponent
+    HometeamComponent,
+    EmployeeloginComponent
   ],
   imports: [
     BrowserModule,
