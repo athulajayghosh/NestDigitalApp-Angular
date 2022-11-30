@@ -10,6 +10,8 @@ import { HomeProductsComponent } from './home-products/home-products.component';
 import { HomeAboutComponent } from './home-about/home-about.component';
 import { HometeamComponent } from './hometeam/hometeam.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
+import { EmployeeregComponent } from './employeereg/employeereg.component';
+import { FormsModule } from '@angular/forms';
 
 const myRoute:Routes=[
   {path:"",
@@ -21,7 +23,9 @@ const myRoute:Routes=[
   {path:"team",
   component:HometeamComponent},
   {path:"employeelogin",
-  component:EmployeeloginComponent}
+  component:EmployeeloginComponent},
+  {path:"employeereg",
+  component:EmployeeregComponent}
 ]
 
 @NgModule({
@@ -32,12 +36,14 @@ const myRoute:Routes=[
     HomeProductsComponent,
     HomeAboutComponent,
     HometeamComponent,
-    EmployeeloginComponent
+    EmployeeloginComponent,
+    EmployeeregComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    FormsModule
 
   ],
   providers: [],
