@@ -1,0 +1,5 @@
+.img1 {
+    object-position: center; /* Center the image within the element */
+    max-height: 600px;
+    margin-bottom: 1rem;
+  }
