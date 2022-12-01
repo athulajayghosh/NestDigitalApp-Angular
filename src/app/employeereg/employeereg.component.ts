@@ -1,3 +1,4 @@
+import { IfStmt } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -65,5 +66,6 @@ export class EmployeeregComponent {
       this.confirmPassword=""
       
     }
+    
 }
 }

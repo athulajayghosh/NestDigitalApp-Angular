@@ -6,15 +6,21 @@ import { ApiService } from '../api.service';
   templateUrl: './view-course.component.html',
   styleUrls: ['./view-course.component.css']
 })
+
+
 export class ViewCourseComponent {
+
+
   constructor(api:ApiService){
     api.fetchCourses().subscribe(
       (response)=>
       {
-        this.coursedata=response;
+        this.loading= false
+        console.log(response)
+        this.coursedata=response
       }
     )
   }
 coursedata:any=[]
-
+loading:boolean=true
 }

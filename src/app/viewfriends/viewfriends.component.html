@@ -1,22 +1,35 @@
 <app-admin-nav></app-admin-nav>
-<h1 class="display-4 text-center mt-3 mb-3">All Friends</h1> 
-<div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12-col-lg-12-col-xl-12 col-xxxl-12">
-            <div class="row g-3">
+<section class="vh-100">
+    <h1 class="display-4 text-center mt-3 mb-3">All Friends</h1> 
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12-col-lg-12-col-xl-12 col-xxxl-12">
+                <div class="row g-3">
 
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of friendsdata">
-                    <div class="card shadow-lg" >
-                        <img src="https://media1.popsugar-assets.com/files/thumbor/IWJWhgmSdKR6tcJYrfAPXK7zAUo/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/03/10/672/n/46902964/tmp_X9PoSR_1ed5c83cb6476e2e_photo-1529333166437-7750a6dd5a70.jpeg" class="card-img-top" >
-                        <div class="card-body">
-                          <h5 class="card-title">Name: {{i.name}}</h5>
-                          <p class="card-text">Friend's Name: {{i.friendName}}</p>
-                          <p class="card-text">Friend's Nickname: {{i.friendNickName}}</p>
-                          <p class="card-text">Describe Your Friend: {{i.DescribeYourFriend}}</p>
+
+                    <ng-container *ngIf="loading; then loadingscreen; else datascreen"></ng-container>
+
+                    <ng-template #loadingscreen>
+                        <div class="text-center d-flex justify-content-center align-items-center">
+                            <div class="spinner-border" role="status"></div>
                         </div>
-                    </div>      
+                    </ng-template>
+
+                    <ng-template #datascreen>
+                    <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of friendsdata">
+                        <div class="card shadow-lg" >
+                            <img src="https://media1.popsugar-assets.com/files/thumbor/IWJWhgmSdKR6tcJYrfAPXK7zAUo/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/03/10/672/n/46902964/tmp_X9PoSR_1ed5c83cb6476e2e_photo-1529333166437-7750a6dd5a70.jpeg" class="card-img-top" >
+                            <div class="card-body">
+                            <h5 class="card-title">Name: {{i.name}}</h5>
+                            <p class="card-text">Friend's Name: {{i.friendName}}</p>
+                            <p class="card-text">Friend's Nickname: {{i.friendNickName}}</p>
+                            <p class="card-text">Describe Your Friend: {{i.DescribeYourFriend}}</p>
+                            </div>
+                        </div>      
+                    </div>
+                    </ng-template>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
